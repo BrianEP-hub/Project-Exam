@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('section.css');
+@import url('header.css');
+@import url('responsive.css');
+/*
+
+@import url('#');
+@import url('#');
+@import url('#');
+@import url('#');
+*/
+
+*{
+	margin: 0;
+	padding: 0;
+	box-scaling: border-box;
+	font-family: '#', sans-serif;
+	scroll-behavior: smooth;
+}
+body::-webkit-scrollbar{
+	width: 0.25rem;
+}
+boyd::-webkit-scrollbar-track{
+	backround: #1e1e24;
+}
+body::-webkit-scrollbar-thumb{
+	backround: #6649b8;
+}

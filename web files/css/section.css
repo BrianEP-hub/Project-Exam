@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* CSS Document */
+section{
+	padding: 15%;
+	background-color: #111;
+	min-height: 50vh;
+}
+section.info{
+	background-color: #333;
+}
+.launch{
+	background-color: #111111
+}
+.heading{
+	width: 100%;
+	text-align: center;
+	margin-bottom: 3%;
+	color: #ddd;
+}
+h1{
+	color: #ddd;
+	font-weight: 1000;
+	font-size: 35px;
+}
+h2{
+	color: #ddd;
+	font-weight: 800;
+	font-size: 30px;
+}
+h3{
+	color: #ddd;
+	font-size: 25px;
+	font-weight: 600;
+}
+p{
+	color: #ddd;
+	font-size: 18px;
+	font-weight: 200;
+	padding: 0 1%;
+}
+.content{
+	display: flex;
+	justify-content: space-between;
+}
+.textBx{
+	justify-content: space-between;
+}
+.container {
+	color: #ddd;
+}
+.details{
+	display: flex;
+	padding: 1%;
+}
+.details img{
+	max-height: 130px;
+	padding: 0 1%;
+}
+footer p{
+	color: #111
+}

@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	transition: 0.3s;
+}
+header .logo{
+	height: 25%;
+	width: auto;
+	margin: 1%;
+}
+header ul{
+	margin: 1%;
+	position: relative;
+	display: flex;
+}
+header ul li{
+	position: relative;
+	list-style-type: none;
+}
+header ul li a{
+	position: relative;
+	display: inline-block;
+	margin: 0 15px;
+	color: #fff;
+	text-decoration: none;
+}
