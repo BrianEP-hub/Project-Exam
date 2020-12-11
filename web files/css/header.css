@@ -13,8 +13,8 @@ header{
 	transition: 0.3s;
 }
 header .logo{
-	height: 25%;
-	width: auto;
+	height: auto;
+	width: 300px;
 	margin: 1%;
 }
 header ul{

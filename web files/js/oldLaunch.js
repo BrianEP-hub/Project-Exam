@@ -1,3 +1,4 @@
+// JavaScript Document
 const url = "https://api.spacexdata.com/v4/launches/";
 
 async function fetchData(){
@@ -22,7 +23,7 @@ function displayOldData(launches){
 
     for(let i = 0; i < launches.length; i++){
 
-        if(launches[i].upcoming === false){
+        if(launches[i].upcoming === true){
             continue;
         }
 
