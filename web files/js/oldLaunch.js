@@ -1,63 +1,56 @@
-const callSpacexData = "https://api.spacexdata.com/v4/launches/";
+// JavaScript Document
+const url = "https://api.spacexdata.com/v4/launches/";
 
-async function fetchSpacexData() {
-    try {
-        const response = await fetch(callSpacexData);
+async function fetchData(){
+    try{
+        const response = await fetch(url);
         const launches = await response.json();
-        displayData(launches);
-
-    } catch (error) {
+        displayOldData(launches);
+    }catch(error){
         console.log(error);
     }
 }
 
-fetchSpacexData();
+fetchData();
 
-function displayData(launches) {
+function displayOldData(launches){
     console.log(launches);
-
-    const launchDeets = document.querySelector(".launchCardOld");
-    const previousDates = document.querySelector(".oldDates");
+    const oldLaunchDetails = document.querySelector(".launchCardOld");
+    const oldDates = document.querySelector(".oldDates");
 
     let calendar = "";
     let html = "";
 
-    for (let i = 0; i < launches.length; i++) {
+    for(let i = 0; i < launches.length; i++){
 
-
-        if (launches[i].upcoming === true) {
+        if(launches[i].upcoming === true){
             continue;
         }
 
-        let launchDet = "Sorry, no details available";
+        let launchDets = "No information available";
 
-        if (launches[i].details) {
-            launchDet = launches[i].details;
+        if(launches[i].details){
+            launchDets = launches[i].details;
         }
 
-        let replaceImageUrl = "images/rocket_cartoon.webp";
+        let imgUrl = "";
 
-        if (launches[i].links.patch.small) {
-
-            replaceImageUrl = launches[i].links.patch.small;
+        if(launches[i].links.patch.small){
+            imgUrl = launches[i].links.patch.small;
         }
 
-        calendar += `<div class="previousDates">
+        calendar += `<div class="oldDates">
                         <p>${launches[i].date_local}</p>
                     </div>`;
 
-        html += `<div class="details">                
-                    <img src="${launches[i].links.patch.small}">
-                    <h3>${launches[i].name}</h3>
-                    <p class="flightNumber">Flight number: ${launches[i].flight_number}</p>
-                    <p class="launch-date">${launches[i].date_local}</p>
-                    <p class="detail-button">${launchDet}</p>
-                    <a class="readmore" href="${launches[i].links.article}">Read more</a>
-                </div>`;
-
+        html += `<div class="details">
+                   <img src="${imgUrl}">
+                   <h3>${launches[i].name}</h3>
+                   <p class="flightNum">Flight Number: ${launches[i].flight_number}</p>
+                   <p class="launchDate">${launches[i].date_local}</p>
+                   <p class="details">${launchDets}</p>
+                </div>`
     }
-    launchDetails.innerHTML = html;
-    previousDates.innerHTML = calendar;
-
-
+    oldLaunchDetails.innerHTML = html;
+    oldDates = calendar;
 }
