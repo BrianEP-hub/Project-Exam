@@ -29,10 +29,10 @@ function displayData(launches){
             continue;
         }
 
-        let launchDetect = "No info available"
+        let launchDetes = "No info available"
 
         if(launches[i].details){
-            launchDetect = launches[i].details
+            launchDetes = launches[i].details
         }
 
         let rocketImg = "";
@@ -49,7 +49,7 @@ function displayData(launches){
 					<h3>${launches[i].name}</h3>
 					<p class="flightNum">Flight Number: ${launches[i].flight_number}</p>
 					<p class="launchDate">${launches[i].date_local}</p>
-					<p class="details">${launchDetect}</p>
+					<p class="launchDetails">${launchDetes}</p>
                 </div>`
     }
     launchDeets.innerHTML = html;

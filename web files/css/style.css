@@ -21,7 +21,7 @@
 body::-webkit-scrollbar{
 	width: 0.25rem;
 }
-boyd::-webkit-scrollbar-track{
+body::-webkit-scrollbar-track{
 	backround: #1e1e24;
 }
 body::-webkit-scrollbar-thumb{

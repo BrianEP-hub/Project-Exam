@@ -42,7 +42,7 @@ function displayData(launches) {
             let countdownClock = "";
 
             countdownClock += `<div>
-                        <p>${days}d ${hours}h ${minutes}min ${seconds}sec</p>                 
+                        <p>${days}d ${hours}h ${minutes}m ${seconds}s</p>                 
                     </div>`;
 
             countdown.innerHTML = countdownClock;

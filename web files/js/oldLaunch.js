@@ -48,7 +48,7 @@ function displayOldData(launches){
                    <h3>${launches[i].name}</h3>
                    <p class="flightNum">Flight Number: ${launches[i].flight_number}</p>
                    <p class="launchDate">${launches[i].date_local}</p>
-                   <p class="details">${launchDets}</p>
+                   <p class="launchDetails">${launchDets}</p>
                 </div>`
     }
     oldLaunchDetails.innerHTML = html;
