@@ -13,6 +13,8 @@ async function fetchData(){
 
 fetchData();
 
+
+//Display function for API call
 function displayOldData(launches){
     console.log(launches);
     const oldLaunchDetails = document.querySelector(".launchCardOld");
@@ -26,19 +28,19 @@ function displayOldData(launches){
         if(launches[i].upcoming === true){
             continue;
         }
-
+		//No info available in API, show this msg
         let launchDets = "No information available";
 
         if(launches[i].details){
             launchDets = launches[i].details;
         }
-
+		//No img available in API, no img displayed
         let imgUrl = "";
 
         if(launches[i].links.patch.small){
             imgUrl = launches[i].links.patch.small;
         }
-
+		//Dates shown localy, not displayed in html, but easy to implement
         calendar += `<div class="oldDates">
                         <p>${launches[i].date_local}</p>
                     </div>`;

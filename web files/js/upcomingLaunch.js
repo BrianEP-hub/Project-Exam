@@ -1,6 +1,6 @@
 // JavaScript Document
 const url = "https://api.spacexdata.com/v4/launches/";
-
+//Call API from API key
 async function fetchData(){
     try{
         const response = await fetch(url);
@@ -13,7 +13,7 @@ async function fetchData(){
 
 fetchData();
 
-
+//Display function for API call
 function displayData(launches){
     console.log(launches);
 
@@ -28,18 +28,18 @@ function displayData(launches){
         if(launches[i].upcoming === false){
             continue;
         }
-
+		//No info available in API, show this msg
         let launchDetes = "No info available"
 
         if(launches[i].details){
             launchDetes = launches[i].details
         }
-
+		//No img available in API, no img displayed
         let rocketImg = "";
             if(launches[i].links.patch.small){
                 rocketImg = launches[i].links.patch.small;
         }
-
+		//Dates shown localy, not displayed in html, but easy to implement
         calendar += `<div class="upcomingLaunches">
                         <p>${launches[i].date_local}</p>
                     </div>`;

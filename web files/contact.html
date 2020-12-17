@@ -6,14 +6,15 @@
 <meta name="description" content="Exam assignment! Site for space launches and information around missions into space, with spacex and NASA">
 <title>SpaceX</title>
 <link href="css/style.css" rel="stylesheet" type="text/css">
+<script src="js/contact.js"></script>
 </head>
 <body>
 <header>
-    <a href="#"><img class="logo" src="img/spacex.png" alt="logo"></a>
+    <a href="index.html"><img class="logo" src="img/spacex.png" alt="logo"></a>
     <div class="toggle" onClick="toggleMenu()"></div>
     <ul class="menu">
         <li><a href="index.html" onClick="toggleMenu()">Home</a></li>
-        <li><a href="info.html" onClick="toggleMenu()">Information</a></li>
+        <li><a href="info.html" onClick="toggleMenu()">Nasa Article</a></li>
         <li><a href="launches.html" onClick="toggleMenu()">Launches</a></li>
         <li><a href="contact.html" onClick="toggleMenu()">Contact</a></li>
     </ul>
@@ -23,7 +24,7 @@
 			<div class="formBx">
 			<h3>Contact us!</h3>
 			<div id="errorMsg"></div>
-			<form id="contact">
+			<form id="contact" onSubmit="return validate()">
 				<div class="inputField">
 					<input type="text" placeholder="Name" id="name">
 				</div>
@@ -39,14 +40,25 @@
 			</form>
 			</div>
 			<div class="contactInfo">
-			<h3>Lorem ipsum</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto eaque ea, fugit, quas non saepe quaerat inventore consectetur excepturi eius mollitia sapiente, architecto maxime modi itaque molestias eligendi magni odit!</p>
+			<h3>Contact us</h3>
+			<p>We would love to hear more from you, and we hope that you would like to hear more from us</p>
+			<p>Mail: <a href="mailto:space@spacelaunch.com">space@spacelaunch.com</a></p>
+			<p>Phone: 1-800-space</p>
+			<p>Adress: Falcon rd. 51, Dragon Ave. Nev. Des.</p>
 			</div>
 		</div>
 	</section>
 	<footer>
     <p>Copyright &copy; Brian B. All rights reserved</p>
-    <!---News signup form set up here-->
+   <div class="footerMenu">
+	<p>Menu</p>
+	<ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="info.html">Information</a></li>
+        <li><a href="launches.html">Launches</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+	</div>
 </footer>
 	</body>
 </html>

@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document */
+
+.formBx{
+	margin-right: 5%;
+	min-width: 45%;
+}
+.contactInfo{
+	min-width: 30%;
+}
+.contactInfo a{
+	text-decoration: none;
+	color: #eee;
+}
+.formBx h3{
+	text-align: center;
+	margin-bottom: 1%;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+.formBx .inputField{
+	margin-bottom: 10px;
+}
+.formBx .inputField input[type="text"],
+.formBx .inputField input[type="email"],
+.formBx .inputField textarea{
+	width: 100%;
+	padding: 10px;
+	background: #222;
+	color: #fff;
+	border: none;
+}
+.formBx .inputField textarea{
+	height: 80px;
+	resize: none;
+}
+.formBx .submitBtn input[type="submit"]{
+	border: 0;
+	margin-top: 1.5%;
+	padding: 2%;
+	width: 15%;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	border-radius: 10px;
+}
+.formBx #errorMsg {
+	margin-bottom: 20px;
+	padding: 0px;
+	background: #fe8b8e;
+	width: auto;
+	text-align: center;
+	font-size: 15px;
+	transition: all 0.5s ease; 
+}

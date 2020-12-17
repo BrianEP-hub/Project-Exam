@@ -1,55 +1,43 @@
 @charset "utf-8";
 /* CSS Document */
-
+/*Media queries for responsive design for smaller screens*/
 @media (max-width: 991px){
 	header,
 	header.sticky{
 		padding: 20px 50px;
 	}
+	.countdown{
+		background-size: contain;
+		background-position: bottom left;
+	}
 	.menu{
-		position: fixed;
-		top: 75px;
-		left: -100%;
-		display: block;
-		padding: 100px 50px;
-		width: 100%;
-		height: 100vh;
-		text-align: center;
-		background: #fff;
-		opacity: 0.3;
-		transition: 0.2s;
-		z-index: 999;
-		border-top: 1px solid rgba(0,0,0,0.2);
-	}
-	.menu.active{
-		left: 0;
-	}
-	.header ul li a{
-		color: #111;
-		font-size: 24px;
-		margin: 10px;
-	}
-	.toggle{
-		width: 40px;
-		height: 40px;
-		backround: url(menu.png);
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: 30px;
-		cursor: pointer;
-	}
-	.toggle.active{
-		backround: url(close.png);
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: 25px;
-		cursor: pointer;
-	}
-	header.sticky .toggle{
-		filter: invert(1);
+		display: none;
 	}
 	section{
 		padding: 100px 50px;
 	}
-	
+	.content{
+		flex-direction: column;
+	}
+	.nasaArt{
+		display: block;
+	}
+	footer .footerMenu p{
+		font-size: 18px;
+	}
+	footer .footerMenu{
+		margin: 1%;
+		display: flex;
+		position: relative;
+	}
+	footer .footerMenu li{
+		position: relative;
+		list-style-type: none;
+	}
+	footer .footerMenu li a{
+		text-decoration: none;
+		display: inline-block;
+		color: #333;
+		padding: 1%;
+	}
 }

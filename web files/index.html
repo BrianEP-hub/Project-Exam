@@ -6,7 +6,6 @@
 <meta name="description" content="Exam assignment! Site for space launches and information around missions into space, with spacex and NASA">
 <title>SpaceX</title>
 <link href="css/style.css" rel="stylesheet" type="text/css">
-<script href="#"></script>
 </head>
 <body>
 <header>
@@ -14,20 +13,21 @@
     <div class="toggle" onClick="toggleMenu()"></div>
     <ul class="menu">
         <li><a href="index.html" onClick="toggleMenu()">Home</a></li>
-        <li><a href="info.html" onClick="toggleMenu()">Information</a></li>
+        <li><a href="info.html" onClick="toggleMenu()">Nasa Article</a></li>
         <li><a href="launches.html" onClick="toggleMenu()">Launches</a></li>
         <li><a href="contact.html" onClick="toggleMenu()">Contact</a></li>
     </ul>
 </header>
-<section class="cooldown">
+<section class="countdown">
 	<div class="heading white">
 		 <h2>Next launch</h2>
 	</div>
     <div class="content">
 		<div class="cd">
 		</div>
+		<div class="launchInfo">
+		</div>
     </div>
-    <div class="launch-time"></div>
 </section>
 <section class="info">
     <div class="heading">
@@ -41,10 +41,26 @@
 </section>
 <section class="contact">
     <div class="heading white">
-		<h2>Contact</h2>
+		<h2>Subscribe</h2>
         <div class="content">
+			<div class="subInfo">
+			<p>Concider subscribing to our newsletter, so you can get updated with new info on latest launches</p>
+			</div>
 			<div class="contactBx">
-			
+				<p>Fill in your credentials</p>
+			<form class="newsForm" action="/subscribe" method="post">
+				<div class="nameBx">
+					<input type="text" placeholder="First name">
+					<br/>
+					<input type="text" placeholder="Last name">
+				</div>
+				<div class="mailBx">
+					<input type="text" placeholder="email">
+				</div>
+				<div class="newsSub">
+					<input type="submit" value="subscribe">
+				</div>
+			</form>
 			</div>
         </div>
     </div>
@@ -52,7 +68,15 @@
 <script src="js/countdown.js"></script>
 <footer>
     <p>Copyright &copy; Brian B. All rights reserved</p>
-    <!---News signup form set up here-->
+    <div class="footerMenu">
+	<p>Menu</p>
+	<ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="info.html">Information</a></li>
+        <li><a href="launches.html">Launches</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+	</div>
 </footer>
 </body>
 </html>

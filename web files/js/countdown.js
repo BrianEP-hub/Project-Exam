@@ -18,7 +18,6 @@ function displayData(launches) {
 
 
     const countdown = document.querySelector(".cd");
-
     for (let i = 0; i < launches.length; i++) {
 
         if (launches[i].upcoming === false) {
@@ -40,11 +39,10 @@ function displayData(launches) {
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
             let countdownClock = "";
-
+			let info = "";
             countdownClock += `<div>
                         <p>${days}d ${hours}h ${minutes}m ${seconds}s</p>                 
                     </div>`;
-
             countdown.innerHTML = countdownClock;
         }, 1000);
 

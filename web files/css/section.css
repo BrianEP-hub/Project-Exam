@@ -1,5 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
+
+/*General items global*/
 section{
 	padding: 15%;
 	background-color: #111;
@@ -7,6 +9,18 @@ section{
 }
 section.info{
 	background-color: #333;
+}
+.countdown{
+	background-image: url("../img/dragon-launch-pod.png");
+	background-size: 900px;
+	background-repeat: no-repeat;
+	background-position: bottom left;
+}
+.info{
+	background-image: url("../img/starship.jpg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom right;
 }
 .launch{
 	background-color: #111111
@@ -38,6 +52,7 @@ p{
 	font-weight: 200;
 	padding: 0 1%;
 }
+/*Countodwn styling*/
 .cd{
 	margin: 0 auto;
 	max-width: 600px;
@@ -56,22 +71,29 @@ p{
 .container {
 	color: #ddd;
 }
+.content .launchCard{
+	border-bottom: 1px solid rgba(256,256,256,0.8);
+	max-width: 40%;
+	margin: 0 auto;
+}
 .details{
-	display: flex;
-	padding: 1%;
 	border-bottom: 1px solid rgba(256,256,256,0.8);
 }
 .details img{
-	max-height: 500px;
+	min-width: 30%;
 	padding: 1%;
 }
 footer p{
 	color: #111
 }
+footer .footerMenu{
+	display: none;
+}
+/*Various segments of site*/
 .infoBx {
 	display: flex;
 	justify-content: space-between;
-	margin: 0 auto;
+	max-width: 600px;
 	font-size: 32px;
 	font-weight: 900;
 }
@@ -87,11 +109,37 @@ footer p{
 }
 .launchBtn {
 	margin: 0 auto;
+	margin-top: 1%;
 }
-#contact {
-	min-width: 60%;
+.nasaArt{
+	display: flex;
+}
+.articleImg{
+	height: 400px;
+}
+.subInfo {
+	max-width: 600px;
+	margin: 0 auto;
+}
+.contactBx {
+	margin: 0 auto;
+}
+.contactBx input[type="text"],
+.contactBx input[type="submit"]{
+	width: 100%;
+	padding: 1em;
+	margin: 1%;
+}
+.contactBx input[type="submit"]{
+	padding: 1.5em;
+	border-radius: 20px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #111;
+	cursor: pointer;
 }
 
-.contactInfo {
-	min-width: 40%;
+.launchCardOld {
+	max-width: 40%;
+	margin: 0 auto;
 }
